@@ -35,9 +35,12 @@
     </div>
   </div>
 </nav>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 <form action="insert.php" method="post">
-<div class="container">
-  <h2 class="blocos" >Dados do cliente</h2>
+  <div class="container">
+
+    <h2 class="blocos" >Dados do cliente</h2>
   <div class="row">
     <div class="col-4">
       <input type="text" name="nome" class="form-control" placeholder="Nome" aria-label="First name">
@@ -45,7 +48,7 @@
     <div class="col-8">
       <input type="text" name="endereco" class="form-control" placeholder="Endereço" aria-label="Last name">
     </div>
-    <div class="col-5"><input type="number" name="numero" class="form-control" placeholder="Número" aria-label="Last name"></div>
+    <div class="col-5"><input type="number" name="numero" class="form-control"  placeholder="Número do endereço" aria-label="Last name"></div>
     <div class="col-2">
       <input type="text" name="bairro" class="form-control" placeholder="Bairro" aria-label="Last name">
     </div>
@@ -56,16 +59,16 @@
       <input type="text" name="estado" class="form-control" placeholder="Estado" aria-label="Last name">
     </div>
     <div class="col-3">
-      <input type="text" name="cep" class="form-control" placeholder="CEP" aria-label="Last name">
+      <input type="text" name="cep" class="form-control" id="cep" placeholder="CEP" aria-label="Last name">
     </div>
     <div class="col-4">
-      <input type="text" name="telefone" class="form-control" placeholder="Telefone" aria-label="Last name">
+      <input type="text" name="telefone" class="form-control" id="telefone" placeholder="Telefone" aria-label="Last name">
     </div>
     <div class="col-6">
-      <input type="text" name=" cpf" class="form-control" placeholder="CPF" aria-label="Last name">
+      <input type="text" name=" cpf" class="form-control" id="cpf"  placeholder="CPF" aria-label="Last name">
     </div>
     <div class="col-6">
-      <input type="text" name="rg" class="form-control" placeholder="RG" aria-label="Last name">
+      <input type="text" name="rg" class="form-control" id="rg" placeholder="RG" aria-label="Last name">
     </div>
     <div class="col-12">
       <input type="text" name="email" class="form-control" placeholder="E-mail" aria-label="Last name">
@@ -77,6 +80,12 @@
   </div>
 
 </div>
-</form>    
+</form>
+<script type="text/javascript"> /*Máscaras*/ 
+$("#telefone").mask("(00) 00000-0000");
+$("#cpf").mask("000.000.000-00");
+$("#rg").mask("00.000.000-0");
+$("#cep").mask("00000-000");
+</script>
 </body>
 </html>

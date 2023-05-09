@@ -51,5 +51,6 @@ h2{
     color: whitesmoke;
     width: 30%;
     display: flex;
-    justify-content: center;    
+    justify-content: center;
+    border-radius: 50px;    
 }
